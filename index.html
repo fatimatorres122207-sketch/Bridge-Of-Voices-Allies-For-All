@@ -5,88 +5,66 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bridge of Voices: Allies</title>
   <meta name="description" content="Bridge of Voices: Allies — an inclusive organization supporting minorities and allies." />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png" />
-
   <style>
     :root{
       --warm:#F2C57C;
       --teal:#44BBA4;
       --pink:#EF7A85;
       --bg:#F2C57C;
-      --muted:#666666;
+      --muted:#555;
       --card-shadow: 0 8px 24px rgba(0,0,0,0.08);
     }
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#111}
     body{background:linear-gradient(180deg, rgba(68,187,164,0.04), rgba(239,122,133,0.02));}
 
-    /* Header */
     header{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1100px;margin:0 auto}
     .brand{display:flex;align-items:center;gap:14px}
     .brand img{width:54px;height:54px;border-radius:12px;box-shadow:var(--card-shadow);object-fit:cover}
-    h1{font-size:18px;margin:0}
+    h1{font-size:20px;margin:0}
     p.lead{margin:0;color:var(--muted);font-size:13px}
 
     nav a{margin-left:18px;text-decoration:none;color:#111;font-weight:600;font-size:14px}
 
-    /* Hero */
-    .hero{max-width:1100px;margin:18px auto;padding:36px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));box-shadow:var(--card-shadow);display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center}
-    .hero .left h2{font-size:34px;margin:0 0 10px}
-    .hero .left p{margin:0 0 20px;color:var(--muted);line-height:1.45}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:12px 18px;border-radius:12px;border:none;cursor:pointer;font-weight:700}
-    .btn-primary{background:var(--teal);color:#fff}
-    .btn-outline{background:transparent;border:2px solid var(--pink);color:var(--pink)}
+    .hero{max-width:1100px;margin:18px auto;padding:36px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));box-shadow:var(--card-shadow);text-align:center}
+    .hero h2{font-size:32px;margin:0 0 12px}
+    .hero p{color:var(--muted);max-width:700px;margin:0 auto 20px}
 
-    .hero-card{background:linear-gradient(180deg, rgba(244,197,124,0.12), rgba(239,122,133,0.03));padding:18px;border-radius:12px}
-    .stat{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-    .stat strong{font-size:20px}
-
-    /* Sections */
     main{max-width:1100px;margin:24px auto;padding:0 18px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:#fff;padding:18px;border-radius:12px;box-shadow:var(--card-shadow)}
-    .card h3{margin-top:0}
+    section{margin-bottom:40px}
+    section h2{margin-bottom:16px;font-size:24px}
 
-    /* Events list */
-    .events ul{list-style:none;padding:0;margin:0}
-    .events li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed #efefef}
+    /* Checklist */
+    .checklist{list-style:none;padding:0;margin:0}
+    .checklist li{display:flex;align-items:center;gap:12px;padding:12px;background:#fff;margin-bottom:10px;border-radius:10px;box-shadow:var(--card-shadow);cursor:pointer;transition:0.2s}
+    .checklist li:hover{background:#f9f9f9}
+    .checklist input{accent-color:var(--teal);width:18px;height:18px}
 
     /* Contact form */
-    form{display:grid;gap:12px}
-    input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6e6e6;font-size:14px}
+    form{display:grid;gap:12px;max-width:500px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #ddd;font-size:14px}
     textarea{min-height:100px}
+    button{background:var(--teal);color:#fff;border:none;padding:12px;border-radius:8px;font-weight:600;cursor:pointer}
 
     footer{max-width:1100px;margin:30px auto;padding:18px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
     .social a{margin-left:12px;text-decoration:none;font-weight:700;color:var(--pink)}
 
-    /* Responsive */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr;}
-      .grid{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width:560px){
-      header{padding:14px}
+    @media(max-width:700px){
       nav{display:none}
-      .grid{grid-template-columns:1fr}
       .brand img{width:46px;height:46px}
-      .hero .left h2{font-size:26px}
     }
   </style>
 </head>
 <body>
   <header>
     <div class="brand">
-      <!-- Logo -->
       <img src="logo.png" alt="Bridge of Voices: Allies Logo" />
       <div>
         <h1>Bridge of Voices: Allies</h1>
         <p class="lead">An inclusive organization supporting minority voices & allies.</p>
       </div>
     </div>
-
     <nav>
       <a href="#about">About</a>
       <a href="#events">Events</a>
@@ -95,106 +73,50 @@
     </nav>
   </header>
 
-  <section class="hero" role="region" aria-label="Introduction">
-    <div class="left">
-      <h2>Build bridges. Amplify voices. Stand together.</h2>
-      <p>Bridge of Voices: Allies brings students from all backgrounds together — to learn, celebrate, and support each other through events, outreach, and mentorship.</p>
-      <div class="cta-row">
-        <a href="#get-involved" class="btn btn-primary">Join Us</a>
-        <a href="#events" class="btn btn-outline">Upcoming Events</a>
-      </div>
-    </div>
+  <section class="hero">
+    <h2>Build bridges. Amplify voices. Stand together.</h2>
+    <p>This site is a work-in-progress and currently serves as our checklist of events and ideas as we grow the organization.</p>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
   <main>
-    <section id="about" class="card" aria-labelledby="about-title">
-      <h2 id="about-title">About Us</h2>
-      <p style="color:var(--muted)">We are an organzation that supports underrepresented and minority students through education, community events, and peer mentorship. Our goal is to make school a safer, more inclusive place for everyone.</p>
+    <section id="about">
+      <h2>About</h2>
+      <p>Bridge of Voices: Allies is an inclusive student-led organization. We are just starting out — this site is currently a planning hub with our ideas and upcoming initiatives.</p>
     </section>
 
-    <section id="events" class="card events" style="margin-top:18px">
-      <h2>Events</h2>
-      <div class="grid" style="margin-top:12px">
-        <div class="card">
-          <h3>Allyship Workshop</h3>
-          <p style="color:var(--muted);font-size:14px">Interactive training on how to support peers, intervene safely, and create inclusive spaces.</p>
-        </div>
-        <div class="card">
-          <h3>Storytelling Night</h3>
-          <p style="color:var(--muted);font-size:14px">Open mic where students share their lived experiences. Safe space & moderated discussion.</p>
-        </div>
-        <div class="card">
-          <h3>Resource Drive</h3>
-          <p style="color:var(--muted);font-size:14px">Collecting clothing, hygiene items, and culturally relevant food for local community centers.</p>
-        </div>
-      </div>
-
-      <div style="margin-top:14px">
-        <h3 style="margin-bottom:8px">Upcoming</h3>
-        <ul>
-          <li><strong>Oct 20</strong> — Cultural Heritage Fair</li>
-          <li><strong>Nov 8</strong> — Disability Awareness Workshop</li>
-          <li><strong>Dec 3</strong> — Holiday Ally Potluck</li>
-        </ul>
-      </div>
+    <section id="events">
+      <h2>Event Checklist</h2>
+      <ul class="checklist">
+        <li><input type="checkbox" /> Cultural Heritage Fair — booths, food, music, dance, and stories from different communities. Guest speakers + local activists.</li>
+        <li><input type="checkbox" /> Storytelling Nights — students share experiences of identity, struggle, or resilience.</li>
+        <li><input type="checkbox" /> Movie + Discussion Nights — films/documentaries highlighting minority voices + guided conversations.</li>
+        <li><input type="checkbox" /> Allyship Training Workshops — standing up against discrimination + knowing your rights (ICE & Police).</li>
+        <li><input type="checkbox" /> Art Sessions — poetry, photography, or any art exploring culture, struggle, or self-expression.</li>
+        <li><input type="checkbox" /> Open Mic Night — music, spoken word, dance, and performances celebrating diversity.</li>
+      </ul>
     </section>
 
-    <section id="get-involved" class="card" style="margin-top:18px">
+    <section id="get-involved">
       <h2>Get Involved</h2>
-      <p style="color:var(--muted)">We welcome volunteers, performers, speakers, and student leaders. Roles range from event planning to outreach and mentorship.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
-        <a class="btn btn-primary" href="#contact">Volunteer</a>
-        <a class="btn btn-outline" href="#contact">Become a Partner</a>
-      </div>
+      <p>Want to help shape our events and initiatives? Join us in planning, outreach, and sharing ideas. Sign-ups will open soon!</p>
     </section>
 
-    <section id="contact" class="card" style="margin-top:18px">
+    <section id="contact">
       <h2>Contact</h2>
-      <form action="#" method="POST" onsubmit="alert('Thanks — form demo. Replace action with your backend endpoint to collect responses.');return false;">
-        <label for="name">Your name</label>
-        <input id="name" name="name" placeholder="Full name" required />
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required />
-
-        <label for="role">I'm interested in</label>
-        <select id="role" name="role">
-          <option>Volunteering</option>
-          <option>Performing</option>
-          <option>Partnership</option>
-          <option>Mental health support</option>
-        </select>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell us how you'd like to help..."></textarea>
-
-        <div style="display:flex;gap:10px">
-          <button class="btn btn-primary" type="submit">Send</button>
-          <button class="btn" type="reset" style="background:transparent;border:1px solid #e6e6e6">Reset</button>
-        </div>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <div>&copy; <strong>Bridge of Voices: Allies</strong> — Inclusive Student Organization</div>
-    <div class="social">Connect
-      <a href="#" aria-label="Instagram">IG</a>
-      <a href="#" aria-label="Facebook">FB</a>
-      <a href="#" aria-label="Email">Email</a>
+    <p>&copy; 2025 Bridge of Voices: Allies</p>
+    <div class="social">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
     </div>
   </footer>
 </body>
