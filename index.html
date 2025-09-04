@@ -3,121 +3,60 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bridge of Voices: Allies</title>
-  <meta name="description" content="Bridge of Voices: Allies — an inclusive organization supporting minorities and allies." />
+  <title>Bridge of Voices: Allies — Planning</title>
   <link rel="icon" type="image/png" href="logo.png" />
   <style>
     :root{
       --warm:#F2C57C;
       --teal:#44BBA4;
       --pink:#EF7A85;
-      --bg:#F2C57C;
-      --muted:#555;
-      --card-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      --muted:#444;
+      --card-shadow:0 4px 12px rgba(0,0,0,0.08);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#111}
-    body{background:linear-gradient(180deg, rgba(68,187,164,0.04), rgba(239,122,133,0.02));}
+    body{margin:0;font-family:Inter,Arial,sans-serif;background:#fafafa;color:#111;padding:24px;line-height:1.5}
+    header{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+    header img{width:60px;height:60px;border-radius:12px;box-shadow:var(--card-shadow);object-fit:cover}
+    header h1{margin:0;font-size:24px}
+    header p{margin:0;color:var(--muted);font-size:14px}
 
-    header{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1100px;margin:0 auto}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{width:54px;height:54px;border-radius:12px;box-shadow:var(--card-shadow);object-fit:cover}
-    h1{font-size:20px;margin:0}
-    p.lead{margin:0;color:var(--muted);font-size:13px}
+    section{margin-bottom:32px}
+    section h2{font-size:20px;margin-bottom:12px;border-bottom:2px solid var(--teal);padding-bottom:4px}
 
-    nav a{margin-left:18px;text-decoration:none;color:#111;font-weight:600;font-size:14px}
+    ul.checklist{list-style:none;padding:0;margin:0}
+    ul.checklist li{display:flex;align-items:flex-start;gap:10px;background:#fff;margin-bottom:8px;padding:10px 14px;border-radius:10px;box-shadow:var(--card-shadow)}
+    ul.checklist input{margin-top:3px;accent-color:var(--teal)}
 
-    .hero{max-width:1100px;margin:18px auto;padding:36px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));box-shadow:var(--card-shadow);text-align:center}
-    .hero h2{font-size:32px;margin:0 0 12px}
-    .hero p{color:var(--muted);max-width:700px;margin:0 auto 20px}
-
-    main{max-width:1100px;margin:24px auto;padding:0 18px}
-    section{margin-bottom:40px}
-    section h2{margin-bottom:16px;font-size:24px}
-
-    /* Checklist */
-    .checklist{list-style:none;padding:0;margin:0}
-    .checklist li{display:flex;align-items:center;gap:12px;padding:12px;background:#fff;margin-bottom:10px;border-radius:10px;box-shadow:var(--card-shadow);cursor:pointer;transition:0.2s}
-    .checklist li:hover{background:#f9f9f9}
-    .checklist input{accent-color:var(--teal);width:18px;height:18px}
-
-    /* Contact form */
-    form{display:grid;gap:12px;max-width:500px}
-    input,textarea{padding:10px;border-radius:8px;border:1px solid #ddd;font-size:14px}
-    textarea{min-height:100px}
-    button{background:var(--teal);color:#fff;border:none;padding:12px;border-radius:8px;font-weight:600;cursor:pointer}
-
-    footer{max-width:1100px;margin:30px auto;padding:18px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
-    .social a{margin-left:12px;text-decoration:none;font-weight:700;color:var(--pink)}
-
-    @media(max-width:700px){
-      nav{display:none}
-      .brand img{width:46px;height:46px}
-    }
+    footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
   </style>
 </head>
 <body>
   <header>
-    <div class="brand">
-      <img src="logo.png" alt="Bridge of Voices: Allies Logo" />
-      <div>
-        <h1>Bridge of Voices: Allies</h1>
-        <p class="lead">An inclusive organization supporting minority voices & allies.</p>
-      </div>
+    <img src="logo.png" alt="Bridge of Voices: Allies Logo" />
+    <div>
+      <h1>Bridge of Voices: Allies</h1>
+      <p>Planning & Ideas — Work in Progress</p>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#events">Events</a>
-      <a href="#get-involved">Get Involved</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </header>
 
-  <section class="hero">
-    <h2>Build bridges. Amplify voices. Stand together.</h2>
-    <p>This site is a work-in-progress and currently serves as our checklist of events and ideas as we grow the organization.</p>
+  <section>
+    <h2>Event Checklist</h2>
+    <ul class="checklist">
+      <li><input type="checkbox"> Cultural Heritage Fair — booths, food, music, dance, and stories from different communities. Guest speakers + local activists.</li>
+      <li><input type="checkbox"> Storytelling Nights — students share personal experiences of identity, struggle, or resilience.</li>
+      <li><input type="checkbox"> Movie + Discussion Nights — films/documentaries highlighting minority voices + guided conversations.</li>
+      <li><input type="checkbox"> Allyship Training Workshops — standing up against discrimination + knowing your rights (ICE & Police).</li>
+      <li><input type="checkbox"> Art Sessions — poetry, photography, or any art exploring culture, struggle, or self-expression.</li>
+      <li><input type="checkbox"> Open Mic Night — music, spoken word, and performances celebrating diversity.</li>
+    </ul>
   </section>
 
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>Bridge of Voices: Allies is an inclusive student-led organization. We are just starting out — this site is currently a planning hub with our ideas and upcoming initiatives.</p>
-    </section>
-
-    <section id="events">
-      <h2>Event Checklist</h2>
-      <ul class="checklist">
-        <li><input type="checkbox" /> Cultural Heritage Fair — booths, food, music, dance, and stories from different communities. Guest speakers + local activists.</li>
-        <li><input type="checkbox" /> Storytelling Nights — students share experiences of identity, struggle, or resilience.</li>
-        <li><input type="checkbox" /> Movie + Discussion Nights — films/documentaries highlighting minority voices + guided conversations.</li>
-        <li><input type="checkbox" /> Allyship Training Workshops — standing up against discrimination + knowing your rights (ICE & Police).</li>
-        <li><input type="checkbox" /> Art Sessions — poetry, photography, or any art exploring culture, struggle, or self-expression.</li>
-        <li><input type="checkbox" /> Open Mic Night — music, spoken word, dance, and performances celebrating diversity.</li>
-      </ul>
-    </section>
-
-    <section id="get-involved">
-      <h2>Get Involved</h2>
-      <p>Want to help shape our events and initiatives? Join us in planning, outreach, and sharing ideas. Sign-ups will open soon!</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+  <section>
+    <h2>Notes</h2>
+    <p>This document is for planning only. Once the organization grows, we can turn this into a full website with event details, sign-ups, and more.</p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Bridge of Voices: Allies</p>
-    <div class="social">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-    </div>
+    &copy; 2025 Bridge of Voices: Allies — Planning Draft
   </footer>
 </body>
 </html>
