@@ -7,28 +7,28 @@
   <meta name="description" content="Bridge of Voices: Allies For All — an inclusive organization supporting minorities and allies." />
   <link rel="icon" type="image/png" href="Logo.png" />
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-
-
-
-  
   <style>
     :root {
-      --warm: #F2C57C;
-      --teal: #44BBA4;
-      --pink: #EF7A85;
-      --text-dark: #222;
-      --text-light: #555;
-      --bg-light: #fafafa;
-      --shadow: 0 8px 28px rgba(0,0,0,0.08);
+      --teal: #3AAFA9;
+      --sand: #F4D35E;
+      --rose: #EE6C7F;
+      --offwhite: #F9FAFB;
+      --gray-dark: #2F2F2F;
+      --gray-light: #6C757D;
+      --shadow: 0 8px 24px rgba(0,0,0,0.08);
+      --radius: 12px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: "Inter", system-ui, sans-serif;
-      background: var(--bg-light);
-      color: var(--text-dark);
-      line-height: 1.6;
+      background: var(--offwhite);
+      color: var(--gray-dark);
+      line-height: 1.7;
     }
 
     /* Header */
@@ -37,8 +37,9 @@
       box-shadow: var(--shadow);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
+
     .container {
       width: 90%;
       max-width: 1200px;
@@ -46,178 +47,199 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 0;
+      padding: 18px 0;
     }
+
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
+
     .brand img {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
       object-fit: cover;
-      box-shadow: var(--shadow);
     }
+
     .brand h1 {
-      font-size: 20px;
-      font-weight: 700;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gray-dark);
     }
+
     nav a {
-      margin-left: 24px;
+      margin-left: 28px;
       text-decoration: none;
-      color: var(--text-dark);
+      color: var(--gray-dark);
       font-weight: 600;
       font-size: 15px;
       position: relative;
+      transition: color 0.3s;
     }
+
     nav a::after {
       content: "";
-      display: block;
-      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: -4px;
       width: 0;
+      height: 2px;
       background: var(--teal);
-      transition: 0.3s;
-      margin-top: 4px;
+      transition: width 0.3s;
     }
-    nav a:hover::after { width: 100%; }
+
+    nav a:hover {
+      color: var(--teal);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
 
     /* Hero */
     .hero {
       text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, var(--teal) 0%, var(--pink) 100%);
+      padding: 100px 20px;
+      background: linear-gradient(135deg, var(--teal), var(--rose));
       color: #fff;
     }
+
     .hero h2 {
-      font-size: 42px;
-      margin-bottom: 16px;
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      margin-bottom: 18px;
     }
+
     .hero p {
-      font-size: 18px;
       max-width: 700px;
       margin: 0 auto;
-      color: #fdfdfd;
+      font-size: 18px;
+      opacity: 0.95;
     }
+
     .hero button {
-      margin-top: 28px;
-      padding: 14px 28px;
+      margin-top: 30px;
+      padding: 14px 34px;
       font-size: 16px;
       border: none;
-      border-radius: 10px;
+      border-radius: var(--radius);
       background: #fff;
       color: var(--teal);
-      font-weight: bold;
+      font-weight: 700;
       cursor: pointer;
       box-shadow: var(--shadow);
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
-    .hero button:hover { transform: translateY(-2px); }
 
-    /* Sections */
+    .hero button:hover {
+      transform: translateY(-3px);
+      background: var(--sand);
+      color: var(--gray-dark);
+    }
+
+    /* Section General */
     section {
-      padding: 70px 20px;
-    }
-    section h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    section p {
-      max-width: 800px;
-      margin: 0 auto 30px;
-      color: var(--text-light);
-      text-align: center;
+      padding: 80px 20px;
     }
 
-    /* Events Grid */
+    section h2 {
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--gray-dark);
+    }
+
+    section p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: var(--gray-light);
+    }
+
+    /* Events */
     .events {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
       max-width: 1100px;
       margin: 0 auto;
     }
+
     .event {
       background: #fff;
-      border-radius: 14px;
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 24px;
-      transition: 0.3s;
+      padding: 26px;
+      transition: transform 0.3s ease;
     }
-    .event:hover { transform: translateY(-4px); }
-    .event h3 { margin-bottom: 10px; color: var(--teal); font-size: 20px; }
 
-    /* Contact Form */
-    form {
-      max-width: 500px;
-      margin: 0 auto;
-      display: grid;
-      gap: 14px;
+    .event:hover {
+      transform: translateY(-5px);
     }
-    input, textarea {
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
+
+    .event h3 {
+      color: var(--teal);
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .event strong {
+      color: var(--rose);
+    }
+
+    .event p {
+      text-align: left;
+      color: var(--gray-light);
       font-size: 15px;
     }
-    textarea { min-height: 120px; }
-    button[type="submit"] {
-      background: var(--teal);
-      color: #fff;
-      font-weight: 600;
-      border: none;
-      border-radius: 8px;
-      padding: 14px;
-      cursor: pointer;
-      transition: 0.3s;
+
+    /* Contact */
+    #contact h2 {
+      margin-bottom: 10px;
     }
-    button[type="submit"]:hover { background: var(--pink); }
+
+    .contact-info {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--teal);
+    }
 
     /* Footer */
     footer {
       background: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-      color: var(--text-light);
       box-shadow: var(--shadow);
-      margin-top: 40px;
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--gray-light);
+      margin-top: 60px;
     }
+
+    .social {
+      margin-top: 12px;
+    }
+
     .social a {
-      margin: 0 10px;
+      margin: 0 12px;
+      color: var(--rose);
       text-decoration: none;
-      color: var(--pink);
-      font-weight: bold;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      color: var(--teal);
     }
 
     /* Responsive */
     @media (max-width: 768px) {
       nav { display: none; }
-      .hero h2 { font-size: 32px; }
+      .hero h2 { font-size: 36px; }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   </style>
 </head>
 <body>
@@ -240,150 +262,49 @@
   <section class="hero">
     <h2>Build Bridges. Amplify Voices. Stand Together.</h2>
     <p>An inclusive student-led organization supporting minority voices & allies through events, awareness, and action.</p>
+    <button>Get Involved</button>
   </section>
 
   <!-- About -->
   <section id="about">
     <h2>About Us</h2>
-    <p>Bridge of Voices: Allies For All is an inclusive organization that empowers minorities and allies by creating safe spaces, hosting cultural events, and offering allyship training. We believe in unity, diversity, and amplifying every voice.</p>
+    <p>Bridge of Voices: Allies For All empowers minorities and allies by creating safe spaces, hosting cultural events, and offering allyship training. We believe in unity, diversity, and amplifying every voice.</p>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
   <!-- Events -->
   <section id="events">
-    <br>
     <h2>Upcoming Events</h2>
     <div class="events">
-
-      
-      
-      
       <div class="event">
-        <center><h3>Storytelling Nights</h3></center>
-        <h3>Every 3rd Monday of the month</h3>
+        <h3>Storytelling Nights</h3>
+        <p><strong>Every 3rd Monday of the month</strong></p>
         <p>Students share experiences of identity, resilience, and growth.</p>
-
-
-        
-<h3 style="color: #EF7A85;">
-November 17th 6:00PM-9:00PM
-  <br>
-  
-Economic Alliance Center
-  <br>
-  
-Hidden Figures</h3>
-
-
-        
-<div>  
-<p>
-<h1>6:00PM</h1>
-  
-  Starting the event with a 5 minute introduction thanking everyone! Telling them they are snacks and food if they didn’t already get anything. We will start the movie in 10 minutes!
-
-<h1>6:10PM</h1>
-  Announce we are going to start the movie!
-Start playing the movie
-
-<h1>8:20PM</h1>
-  The movie is over! 
-Discussion time!  
-
-<h1>9:00PM </h1>
-  Wrapping up discussion.
-</p>
-
-      </center>
+        <p><strong>November 17th · 6:00PM–9:00PM</strong><br>Economic Alliance Center — <em>Hidden Figures</em></p>
+        <p>
+          <strong>6:00PM:</strong> Welcome & introductions.<br>
+          <strong>6:10PM:</strong> Movie begins.<br>
+          <strong>8:20PM:</strong> Post-movie discussion.<br>
+          <strong>9:00PM:</strong> Wrap-up and closing remarks.
+        </p>
       </div>
-
-
-
-
-
-
-
-        
     </div>
+  </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-<section id="get-involved">
-
-
-
-  
+  <!-- Contact -->
   <section id="contact">
-  <h2>Contact Us</h2>
-<h2>bridgeofvoicesalliesforall@gmail.com</h2>
-  
+    <h2>Contact Us</h2>
+    <p class="contact-info">bridgeofvoicesalliesforall@gmail.com</p>
+  </section>
 
-
-
-
-
-
-
-    
-
-
-
-
-  
-
-  
   <!-- Footer -->
   <footer>
-    <p>&copy; Bridge of Voices: Allies For All</p>
+    <p>&copy; 2025 Bridge of Voices: Allies For All</p>
     <div class="social">
-
-    <a href="https://www.instagram.com/bridge.of.voices/" target="_blank">Instagram</a> 
-    <a href="https://www.facebook.com/profile.php?id=61580720751408" target="_blank">Facebook</a>
-    <a href="https://www.facebook.com/profile.php?id=61580720751408" target="_blank">bridgeofvoicesalliesforall@gmail.com</a>
-
-  </div>
-</footer>
-
-
-    
+      <a href="https://www.instagram.com/bridge.of.voices/" target="_blank">Instagram</a> 
+      <a href="https://www.facebook.com/profile.php?id=61580720751408" target="_blank">Facebook</a>
+      <a href="mailto:bridgeofvoicesalliesforall@gmail.com">Email</a>
+    </div>
+  </footer>
 </body>
 </html>
+
