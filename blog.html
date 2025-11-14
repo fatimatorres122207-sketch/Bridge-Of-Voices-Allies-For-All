@@ -50,6 +50,11 @@
       padding: 18px 0;
     }
 
+    /* FIX: Blog posts should stack, not be flex */
+    main.container {
+      display: block;
+    }
+
     .brand {
       display: flex;
       align-items: center;
@@ -140,73 +145,23 @@
       color: var(--gray-dark);
     }
 
-    /* Section General */
-    section {
-      padding: 80px 20px;
-    }
-
-    section h2 {
-      text-align: center;
-      font-family: "Playfair Display", serif;
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: var(--gray-dark);
-    }
-
-    section p {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 40px;
-      color: var(--gray-light);
-    }
-
-    /* Events */
-    .events {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .event {
+    /* Blog Formatting */
+    .blog-post {
       background: #fff;
+      padding: 24px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 26px;
-      transition: transform 0.3s ease;
+      margin-bottom: 40px;
     }
 
-    .event:hover {
-      transform: translateY(-5px);
-    }
-
-    .event h3 {
+    .blog-post h2 {
+      font-family: "Playfair Display", serif;
+      margin-bottom: 6px;
       color: var(--teal);
-      margin-bottom: 10px;
-      font-size: 20px;
     }
 
-    .event strong {
-      color: var(--rose);
-    }
-
-    .event p {
-      text-align: left;
-      color: var(--gray-light);
-      font-size: 15px;
-    }
-
-    /* Contact */
-    #contact h2 {
-      margin-bottom: 10px;
-    }
-
-    .contact-info {
-      text-align: center;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--teal);
+    .blog-post p {
+      margin-bottom: 12px;
     }
 
     /* Footer */
@@ -257,21 +212,11 @@
     </div>
   </header>
 
-
-
-
-
-
-
-
-
-
 <br>
 <center>
 <h1>Blog posts every Friday!</h1>
 </center>
 <br>
-  
 
   <!-- Main Content -->
   <main class="container">
@@ -281,54 +226,22 @@
       <p><em>By Toney | November 7, 2025</em></p>
       <p>I wanted to be a part of Bridge Of Voices because I care deeply about equality within
         every race, gender, sexuality, etc. I want people to be comfortable in their own skin,
-        and comfortable being around people who are different from them. <a href="toney.html" class="nav-link cta" style="color: #EE6C7F;">Read more...</a></p>
+        and comfortable being around people who are different from them. 
+        <a href="toney.html" style="color: #EE6C7F;">Read more...</a>
+      </p>
     </article>
-
-<br>
-    <br>
 
     <article class="blog-post">
       <h2>First Generation Experience</h2>
       <p><em>By Karla | November 14, 2025</em></p>
       <p>Being first-generation means stepping into every space with dual responsibility — honoring where I came from while simultaneously
         building something that has never existed before me. I moved to the United States from Mexico at six years old, long before I understood the weight of that transition. 
-        <a href="karla.html" class="nav-link cta" style="color: #EE6C7F;">Read more...</a></p>
+        <a href="karla.html" style="color: #EE6C7F;">Read more...</a>
+      </p>
     </article>
-    
 
   </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-  
   <!-- Footer -->
   <footer>
     <p>&copy;Bridges of Voices: Allies For All</p>
@@ -338,8 +251,7 @@
       <a href="mailto:bridgeofvoicesalliesforall@gmail.com">Email</a>
     </div>
   </footer>
+
 </body>
 </html>
 
-
-  
