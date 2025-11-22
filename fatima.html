@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bridges of Voices: Allies For All</title>
+  <meta name="description" content="Bridges of Voices: Allies For All — an inclusive organization supporting minorities and allies." />
+  <link rel="icon" type="image/png" href="Logo.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+  --teal: #47B3AD;       /* Slightly brighter, a hint more mint */
+  --sand: #EFCB68;       /* Warmer, softer golden sand */
+  --rose: #E86A8A;       /* Slightly deeper pink-rose tone */
+  --offwhite: #F7F8FA;   /* Cooler off-white, subtle gray tint */
+  --gray-dark: #303336;  /* A touch cooler and softer than pure charcoal */
+  --gray-light: #7A848C; /* Slightly bluer light gray for contrast */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* A little more depth */
+  --radius: 12px;
+}
+
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--offwhite);
+      color: var(--gray-dark);
+      line-height: 1.7;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
+    .brand h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gray-dark);
+    }
+
+    nav a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: var(--gray-dark);
+      font-weight: 600;
+      font-size: 15px;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--teal);
+      transition: width 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--teal);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, var(--teal), var(--rose));
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      padding: 14px 34px;
+      font-size: 16px;
+      border: none;
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--teal);
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .hero button:hover {
+      transform: translateY(-3px);
+      background: var(--sand);
+      color: var(--gray-dark);
+    }
+
+    /* Section General */
+    section {
+      padding: 80px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--gray-dark);
+    }
+
+    section p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: var(--gray-light);
+    }
+
+    /* Events */
+    .events {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .event {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      transition: transform 0.3s ease;
+    }
+
+    .event:hover {
+      transform: translateY(-5px);
+    }
+
+    .event h3 {
+      color: var(--teal);
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .event strong {
+      color: var(--rose);
+    }
+
+    .event p {
+      text-align: left;
+      color: var(--gray-light);
+      font-size: 15px;
+    }
+
+    /* Contact */
+    #contact h2 {
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--teal);
+    }
+
+    /* Footer */
+    footer {
+      background: #fff;
+      box-shadow: var(--shadow);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--gray-light);
+      margin-top: 60px;
+    }
+
+    .social {
+      margin-top: 12px;
+    }
+
+    .social a {
+      margin: 0 12px;
+      color: var(--rose);
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      color: var(--teal);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hero h2 { font-size: 36px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="brand">
+        <img src="Logo.png" alt="Bridges of Voices: Allies For All Logo" />
+        <h1>Bridges of Voices: Allies For All</h1>
+      </div>
+
+
+      <nav>
+        <a href="index.html" class="nav-link cta">Home</a>
+        <a href="blog.html" class="nav-link cta">Blog</a>
+
+</nav>
+      
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Main Content -->
+<main class="container">
+
+  <article class="blog-post">
+    <h2>Our Logo</h2>
+    <p><em>By Toney | November 7, 2025</em></p>
+
+    <img src="toney.png" alt="Bridge of Voices Logo" 
+         style="float: left; margin: 10px 30px 10px 0;" width="300">
+
+    
+    
+One of the reasons I care so deeply about Bridges of Voices is because I see how divided
+    the world has become. People are so often viewed through their race, ethnicity, or sexuality 
+    instead of being seen as full human beings. As a bisexual Mexican American, I’ve experienced 
+    what it feels like to belong to communities that both face oppression, yet still struggle to 
+    stand in solidarity with one another. I’ve seen groups demand equality, understanding, and safety 
+    for themselves while sometimes failing to extend that same compassion to other marginalized people.
+    That disconnect hurts. It’s painful to watch minorities who fight for justice drift apart instead of 
+    supporting each other. This separation is something that has always saddened me, and it’s why I want to
+    make a change — even if it starts small. I want to help build spaces where people are understood beyond labels, 
+    where empathy replaces 
+    division, and where different communities can advocate with each other instead of apart.
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy;Bridges of Voices: Allies For All</p>
+    <div class="social">
+      <a href="https://www.instagram.com/bridge.of.voices/" target="_blank">Instagram</a> 
+      <a href="https://www.facebook.com/profile.php?id=61580720751408" target="_blank">Facebook</a>
+      <a href="mailto:bridgeofvoicesalliesforall@gmail.com">Email</a>
+    </div>
+  </footer>
+</body>
+</html>
