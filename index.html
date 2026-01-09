@@ -338,20 +338,50 @@
 </p>
 
 
+
+
+
+
+
+
+
+
+
 <div class="event">
   <h3>December 8 Event Highlights</h3>
   <strong>December 8</strong>
-  <p>Moments from our December 8 gathering.</p>
+  <p>Highlights from our December 8 gathering.</p>
 
-  <div class="event-images">
-    <img src="event1.jpg" alt="December 8 event photo 1">
-    <img src="event2.jpg" alt="December 8 event photo 2">
-    <img src="event3.jpg" alt="December 8 event photo 3">
-    <img src="event4.jpg" alt="December 8 event photo 4">
-    <img src="event5.jpg" alt="December 8 event photo 5">
+  <div class="carousel">
+    <button class="carousel-btn left" onclick="moveCarousel(-1)">‹</button>
+
+    <div class="carousel-track" id="carouselTrack">
+      <img src="event1.jpg" alt="Event photo 1">
+      <img src="event2.jpg" alt="Event photo 2">
+      <img src="event3.jpg" alt="Event photo 3">
+      <img src="event4.jpg" alt="Event photo 4">
+      <img src="event5.jpg" alt="Event photo 5">
+    </div>
+
+    <button class="carousel-btn right" onclick="moveCarousel(1)">›</button>
   </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
       
       <!-- Event -->
@@ -408,6 +438,45 @@
       <a href="mailto:bridgeofvoicesalliesforall@gmail.com">Email</a>
     </div>
   </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  let currentIndex = 0;
+
+  function moveCarousel(direction) {
+    const track = document.getElementById("carouselTrack");
+    const images = track.children;
+    const imageWidth = images[0].offsetWidth + 6; // match margin-right
+    const visibleImages = Math.floor(track.parentElement.offsetWidth / imageWidth);
+
+    currentIndex += direction;
+
+    currentIndex = Math.max(
+      0,
+      Math.min(currentIndex, images.length - visibleImages)
+    );
+
+    track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+  }
+</script>
+
+
+
+
+
+
+  
 </body>
 </html>
 
