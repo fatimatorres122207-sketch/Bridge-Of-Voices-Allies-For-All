@@ -1,41 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bridges of Voices: Allies For All</title>
   <meta name="description" content="Bridges of Voices: Allies For All — an inclusive organization supporting minorities and allies." />
-  <link rel="icon" type="image/png" href="Logo.png" href="style.css"/>
+  <link rel="icon" type="image/png" href="Logo.png"/>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-<script src="scripts.js"></script>
-<style>
-.rsvp-container {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.rsvp-button {
-  display: inline-block;
-  padding: 12px 28px;
-  background: var(--teal);
-  color: #fff;
-  font-weight: 700;
-  border-radius: var(--radius);
-  text-decoration: none;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  font-size: 16px;
-}
-
-.rsvp-button:hover {
-  background: var(--rose);
-  color: #fff;
-  transform: translateY(-3px);
-}
+  <style>
     :root {
       --teal: #3AAFA9;
       --sand: #F4D35E;
@@ -222,6 +197,77 @@
       font-size: 15px;
     }
 
+    /* RSVP Button */
+    .rsvp-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .rsvp-button {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--teal);
+      color: #fff;
+      font-weight: 700;
+      border-radius: var(--radius);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+
+    .rsvp-button:hover {
+      background: var(--rose);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* Carousel */
+    .carousel {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+      margin: 20px auto;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+      gap: 6px;
+    }
+
+    .carousel-track img {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      font-size: 24px;
+      line-height: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .carousel-btn.left { left: 10px; }
+    .carousel-btn.right { right: 10px; }
+
+    .carousel-btn:hover { background: var(--rose); }
+
     /* Contact */
     #contact h2 {
       margin-bottom: 10px;
@@ -264,6 +310,7 @@
     @media (max-width: 768px) {
       nav { display: none; }
       .hero h2 { font-size: 36px; }
+      .carousel-track img { width: 140px; height: 100px; }
     }
   </style>
 </head>
@@ -272,15 +319,14 @@
   <header>
     <div class="container">
       <div class="brand">
-        <img src="Logo.png" alt="Bridges of Voices: Allies For All Logo" />
+        <img src="Logo.png" alt="Bridges of Voices Logo" />
         <h1>Bridges of Voices: Allies For All</h1>
       </div>
       <nav>
         <a href="#about">About</a>
         <a href="#events">Events</a>
         <a href="blog.html" class="nav-link cta">Blog</a>
-
-</nav>
+      </nav>
     </div>
   </header>
 
@@ -296,142 +342,61 @@
     <p>Bridges of Voices: Allies For All empowers minorities and allies by creating safe spaces, hosting cultural events, and offering allyship training. We believe in unity, diversity, and amplifying every voice.</p>
   </section>
 
+  <!-- Events -->
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <div class="events">
+      <div class="event">
+        <h3>Storytelling Nights</h3>
+        <strong>Location: 501 1st St SE (Economic Alliance Building) Cedar Rapids IA 52402</strong>
 
+        <div class="rsvp-container">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSLrdHzWgRAnTFUh59xkGSCg16qv-aWtglTQZqxJUsuhHmNg/viewform?usp=header" target="_blank" class="rsvp-button">RSVP Here</a>
+        </div>
 
+        <p>Movie + Discussion Nights – screen films/documentaries highlighting minority voices, then host guided conversations.</p>
 
+        <h3>December 8 Event Highlights</h3>
+        <p>Highlights from our December 8 gathering.</p>
 
+        <div class="carousel">
+          <button class="carousel-btn left" onclick="moveCarousel(-1)">‹</button>
+          <div class="carousel-track" id="carouselTrack">
+            <img src="event1.jpg" alt="Event photo 1">
+            <img src="event2.jpg" alt="Event photo 2">
+            <img src="event3.jpg" alt="Event photo 3">
+            <img src="event4.jpg" alt="Event photo 4">
+            <img src="event5.jpg" alt="Event photo 5">
+          </div>
+          <button class="carousel-btn right" onclick="moveCarousel(1)">›</button>
+        </div>
 
+        <p><strong>January 23th 6:00PM–9:00PM</strong><br>
+        Economic Alliance Center — <em>Under The Same Moon</em></p>
+        <p>
+          <strong>Event Schedule:</strong><br>
+          <strong>6:00PM:</strong> 5-minute introduction thanking everyone and mentioning snacks/food. Movie starts in 10 minutes.<br>
+          <strong>6:10PM:</strong> Start the movie.<br>
+          <strong>8:20PM:</strong> Movie ends — Discussion time!<br>
+          <strong>9:00PM:</strong> Wrap up discussion.
+        </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Events -->
-<section id="events">
-  <h2>Upcoming Events</h2>
-  <div class="events">
-    
-    <div class="event">
-      <strong><h3>Storytelling Nights</h3></strong>
-      <br>
-      <strong>Location: 501 1st St SE (Economic Alliance Building) Cedar Rapids IA 52402</strong>
-      <br>
-
-<div class="rsvp-container">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSLrdHzWgRAnTFUh59xkGSCg16qv-aWtglTQZqxJUsuhHmNg/viewform?usp=header" target="_blank" class="rsvp-button">RSVP Here</a>
-</div>
-
-
-      <br>
-      <p>Movie + Discussion Nights – screen films/documentaries highlighting minority voices, then host guided conversations.
-</p>
-
-
-
-
-
-
-
-
-
-
-
-<div class="event">
-  <h3>December 8 Event Highlights</h3>
-  <strong>December 8</strong>
-  <p>Highlights from our December 8 gathering.</p>
-
-  <div class="carousel">
-    <button class="carousel-btn left" onclick="moveCarousel(-1)">‹</button>
-
-    <div class="carousel-track" id="carouselTrack">
-      <img src="event1.jpg" alt="Event photo 1">
-      <img src="event2.jpg" alt="Event photo 2">
-      <img src="event3.jpg" alt="Event photo 3">
-      <img src="event4.jpg" alt="Event photo 4">
-      <img src="event5.jpg" alt="Event photo 5">
+        <p><strong>February 6:00PM–9:00PM</strong><br>
+        Economic Alliance Center — <em>The Help</em></p>
+        <p>
+          <strong>Event Schedule:</strong><br>
+          <strong>6:00PM:</strong> 5-minute introduction thanking everyone and mentioning snacks/food. Movie starts in 10 minutes.<br>
+          <strong>6:10PM:</strong> Start the movie.<br>
+          <strong>8:20PM:</strong> Movie ends — Discussion time!<br>
+          <strong>9:00PM:</strong> Wrap up discussion.
+        </p>
+      </div>
     </div>
-
-    <button class="carousel-btn right" onclick="moveCarousel(1)">›</button>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-      
-      <!-- Event -->
-      <p><strong>January 23th 6:00PM–9:00PM</strong><br>
-      Economic Alliance Center — <em>Under The Same Moon</em></p>
-      <p>
-        <strong>Event Schedule:</strong><br>
-        <strong>6:00PM:</strong> 5-minute introduction thanking everyone and mentioning snacks/food. Movie starts in 10 minutes.<br>
-        <strong>6:10PM:</strong> Start the movie.<br>
-        <strong>8:20PM:</strong> Movie ends — Discussion time!<br>
-        <strong>9:00PM:</strong> Wrap up discussion.
-      </p>
-
-      <!-- Event -->
-      <p><strong>February 6:00PM–9:00PM</strong><br>
-      Economic Alliance Center — <em>The Help</em></p>
-      <p>
-        <strong>Event Schedule:</strong><br>
-        <strong>6:00PM:</strong> 5-minute introduction thanking everyone and mentioning snacks/food. Movie starts in 10 minutes.<br>
-        <strong>6:10PM:</strong> Start the movie.<br>
-        <strong>8:20PM:</strong> Movie ends — Discussion time!<br>
-        <strong>9:00PM:</strong> Wrap up discussion.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy;Bridges of Voices: Allies For All</p>
+    <p>&copy; Bridges of Voices: Allies For All</p>
     <div class="social">
       <a href="https://www.instagram.com/bridge.of.voices/" target="_blank">Instagram</a> 
       <a href="https://www.facebook.com/profile.php?id=61580720751408" target="_blank">Facebook</a>
@@ -439,44 +404,21 @@
     </div>
   </footer>
 
+  <script>
+    let currentIndex = 0;
 
+    function moveCarousel(direction) {
+      const track = document.getElementById("carouselTrack");
+      const images = track.children;
+      const imageWidth = images[0].offsetWidth + 6; // match gap
+      const visibleImages = Math.floor(track.parentElement.offsetWidth / imageWidth);
 
+      currentIndex += direction;
+      currentIndex = Math.max(0, Math.min(currentIndex, images.length - visibleImages));
 
-
-
-
-
-
-
-
-
-
-<script>
-  let currentIndex = 0;
-
-  function moveCarousel(direction) {
-    const track = document.getElementById("carouselTrack");
-    const images = track.children;
-    const imageWidth = images[0].offsetWidth + 6; // match margin-right
-    const visibleImages = Math.floor(track.parentElement.offsetWidth / imageWidth);
-
-    currentIndex += direction;
-
-    currentIndex = Math.max(
-      0,
-      Math.min(currentIndex, images.length - visibleImages)
-    );
-
-    track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-  }
-</script>
-
-
-
-
-
-
-  
+      track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+    }
+  </script>
 </body>
 </html>
 
